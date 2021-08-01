@@ -1,14 +1,11 @@
 package com.sparkbyexamples.java;
-import org.apache.spark.api.java.JavaRDD;
-import org.apache.spark.api.java.JavaSparkContext;
+
 import org.apache.spark.sql.Dataset;
 import org.apache.spark.sql.Row;
+import static org.apache.spark.sql.functions.*;
 import org.apache.spark.sql.SparkSession;
-import scala.Tuple2;
 
 import java.io.IOException;
-import java.util.Arrays;
-import java.util.List;
 
 public class DataframeTest {
 
@@ -18,9 +15,14 @@ public class DataframeTest {
                 .master("local[6]")
                 .appName("Flight")
                 .getOrCreate();
-        Dataset<Row> flight = spark.read().json("src/main/resources/flight.json");
-        System.out.println(flight.count());
-
-        System.in.read();   // Now open http://localhost:4040/
+        Dataset<Row> flight = spark.read().json("src/main/resources/flight.json").repartition(8);
+//        System.out.println(flight.count()); // 282628
+        flight
+            .filter("dist > 2700")
+            .groupBy("carrier")
+            .count()
+            .orderBy("count")
+            .show();   // 3221
+        System.in.read();   // Now open http://localhost:4040/SQL/execution/?id=0
     }
 }
