@@ -1,10 +1,7 @@
 package com.sparkbyexamples.java;
 
-import org.apache.spark.sql.Dataset;
-import org.apache.spark.sql.Row;
+import org.apache.spark.sql.*;
 import static org.apache.spark.sql.functions.*;
-import org.apache.spark.sql.SparkSession;
-
 import java.io.IOException;
 
 public class DataframeTest {
@@ -18,11 +15,13 @@ public class DataframeTest {
         Dataset<Row> flight = spark.read().json("src/main/resources/flight.json").repartition(8);
 //        System.out.println(flight.count()); // 282628
         flight
-            .filter("dist > 2700")
-            .groupBy("carrier")
-            .count()
-            .orderBy("count")
-            .show();   // 3221
+                .filter(col("dist").gt(2700)) // dist > 2700
+                .groupBy("carrier")
+                .count()
+                .orderBy("count")
+                .write()
+                .mode(SaveMode.Overwrite)
+                .parquet("/tmp/flight.parquet");
         System.in.read();   // Now open http://localhost:4040/SQL/execution/?id=0
     }
 }
