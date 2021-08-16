@@ -15,10 +15,10 @@ public class DataframeTest {
         Dataset<Row> flight = spark.read().json("src/main/resources/flight.json").repartition(8);
 //        System.out.println(flight.count()); // 282628
         flight
-                .filter(col("dist").gt(2700)) // dist > 2700
-                .groupBy("carrier")
+                .filter(flight.col("dist").gt(2700)) // dist > 2700
+                .groupBy(flight.col("carrier"))
                 .count()
-                .orderBy("count")
+                .orderBy(col("count"))
                 .write()
                 .mode(SaveMode.Overwrite)
                 .parquet("/tmp/flight.parquet");
