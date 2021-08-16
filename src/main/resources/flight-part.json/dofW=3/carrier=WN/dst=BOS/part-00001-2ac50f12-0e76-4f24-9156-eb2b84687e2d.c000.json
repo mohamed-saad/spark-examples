@@ -1,0 +1,13 @@
+{"arrdelay":0.0,"crsarrtime":25,"crsdephour":22,"crsdeptime":2150,"crselapsedtime":155.0,"depdelay":13.0,"dist":946.0,"fldate":"2018-02-07","id":"ATL_BOS_2018-02-07_WN_948","month":2,"src":"ATL"}
+{"arrdelay":0.0,"crsarrtime":2355,"crsdephour":18,"crsdeptime":1800,"crselapsedtime":235.0,"depdelay":2.0,"dist":1754.0,"fldate":"2018-02-07","id":"DEN_BOS_2018-02-07_WN_6033","month":2,"src":"DEN"}
+{"arrdelay":0.0,"crsarrtime":2115,"crsdephour":18,"crsdeptime":1845,"crselapsedtime":150.0,"depdelay":0.0,"dist":946.0,"fldate":"2018-02-14","id":"ATL_BOS_2018-02-14_WN_4886","month":2,"src":"ATL"}
+{"arrdelay":0.0,"crsarrtime":1105,"crsdephour":8,"crsdeptime":830,"crselapsedtime":155.0,"depdelay":0.0,"dist":946.0,"fldate":"2018-02-14","id":"ATL_BOS_2018-02-14_WN_6860","month":2,"src":"ATL"}
+{"arrdelay":0.0,"crsarrtime":2305,"crsdephour":17,"crsdeptime":1720,"crselapsedtime":225.0,"depdelay":10.0,"dist":1754.0,"fldate":"2018-02-14","id":"DEN_BOS_2018-02-14_WN_5010","month":2,"src":"DEN"}
+{"arrdelay":0.0,"crsarrtime":1640,"crsdephour":14,"crsdeptime":1405,"crselapsedtime":155.0,"depdelay":0.0,"dist":946.0,"fldate":"2018-02-21","id":"ATL_BOS_2018-02-21_WN_622","month":2,"src":"ATL"}
+{"arrdelay":0.0,"crsarrtime":1105,"crsdephour":8,"crsdeptime":830,"crselapsedtime":155.0,"depdelay":2.0,"dist":946.0,"fldate":"2018-02-21","id":"ATL_BOS_2018-02-21_WN_6860","month":2,"src":"ATL"}
+{"arrdelay":46.0,"crsarrtime":25,"crsdephour":22,"crsdeptime":2150,"crselapsedtime":155.0,"depdelay":50.0,"dist":946.0,"fldate":"2018-02-21","id":"ATL_BOS_2018-02-21_WN_948","month":2,"src":"ATL"}
+{"arrdelay":0.0,"crsarrtime":2355,"crsdephour":18,"crsdeptime":1800,"crselapsedtime":235.0,"depdelay":13.0,"dist":1754.0,"fldate":"2018-02-21","id":"DEN_BOS_2018-02-21_WN_6033","month":2,"src":"DEN"}
+{"arrdelay":7.0,"crsarrtime":1640,"crsdephour":14,"crsdeptime":1405,"crselapsedtime":155.0,"depdelay":2.0,"dist":946.0,"fldate":"2018-02-28","id":"ATL_BOS_2018-02-28_WN_622","month":2,"src":"ATL"}
+{"arrdelay":0.0,"crsarrtime":1105,"crsdephour":8,"crsdeptime":830,"crselapsedtime":155.0,"depdelay":0.0,"dist":946.0,"fldate":"2018-02-28","id":"ATL_BOS_2018-02-28_WN_6860","month":2,"src":"ATL"}
+{"arrdelay":0.0,"crsarrtime":25,"crsdephour":22,"crsdeptime":2150,"crselapsedtime":155.0,"depdelay":6.0,"dist":946.0,"fldate":"2018-02-28","id":"ATL_BOS_2018-02-28_WN_948","month":2,"src":"ATL"}
+{"arrdelay":0.0,"crsarrtime":2355,"crsdephour":18,"crsdeptime":1800,"crselapsedtime":235.0,"depdelay":0.0,"dist":1754.0,"fldate":"2018-02-28","id":"DEN_BOS_2018-02-28_WN_6033","month":2,"src":"DEN"}

@@ -1,0 +1,12 @@
+{"arrdelay":0.0,"crsarrtime":2306,"crsdephour":21,"crsdeptime":2105,"crselapsedtime":121.0,"depdelay":2.0,"dist":529.0,"fldate":"2018-01-07","id":"EWR_CLT_2018-01-07_UA_994","month":1,"src":"EWR"}
+{"arrdelay":0.0,"crsarrtime":2009,"crsdephour":16,"crsdeptime":1645,"crselapsedtime":144.0,"depdelay":0.0,"dist":912.0,"fldate":"2018-01-07","id":"IAH_CLT_2018-01-07_UA_1059","month":1,"src":"IAH"}
+{"arrdelay":0.0,"crsarrtime":859,"crsdephour":6,"crsdeptime":605,"crselapsedtime":114.0,"depdelay":0.0,"dist":599.0,"fldate":"2018-01-07","id":"ORD_CLT_2018-01-07_UA_1750","month":1,"src":"ORD"}
+{"arrdelay":9.0,"crsarrtime":2230,"crsdephour":20,"crsdeptime":2033,"crselapsedtime":117.0,"depdelay":10.0,"dist":529.0,"fldate":"2018-01-14","id":"EWR_CLT_2018-01-14_UA_649","month":1,"src":"EWR"}
+{"arrdelay":0.0,"crsarrtime":1538,"crsdephour":12,"crsdeptime":1208,"crselapsedtime":150.0,"depdelay":0.0,"dist":912.0,"fldate":"2018-01-14","id":"IAH_CLT_2018-01-14_UA_659","month":1,"src":"IAH"}
+{"arrdelay":0.0,"crsarrtime":2230,"crsdephour":20,"crsdeptime":2033,"crselapsedtime":117.0,"depdelay":0.0,"dist":529.0,"fldate":"2018-01-21","id":"EWR_CLT_2018-01-21_UA_649","month":1,"src":"EWR"}
+{"arrdelay":3.0,"crsarrtime":1538,"crsdephour":12,"crsdeptime":1208,"crselapsedtime":150.0,"depdelay":6.0,"dist":912.0,"fldate":"2018-01-21","id":"IAH_CLT_2018-01-21_UA_659","month":1,"src":"IAH"}
+{"arrdelay":8.0,"crsarrtime":2230,"crsdephour":20,"crsdeptime":2033,"crselapsedtime":117.0,"depdelay":0.0,"dist":529.0,"fldate":"2018-01-28","id":"EWR_CLT_2018-01-28_UA_649","month":1,"src":"EWR"}
+{"arrdelay":0.0,"crsarrtime":1538,"crsdephour":12,"crsdeptime":1208,"crselapsedtime":150.0,"depdelay":0.0,"dist":912.0,"fldate":"2018-01-28","id":"IAH_CLT_2018-01-28_UA_659","month":1,"src":"IAH"}
+{"arrdelay":0.0,"crsarrtime":2230,"crsdephour":20,"crsdeptime":2033,"crselapsedtime":117.0,"depdelay":0.0,"dist":529.0,"fldate":"2018-02-04","id":"EWR_CLT_2018-02-04_UA_649","month":2,"src":"EWR"}
+{"arrdelay":0.0,"crsarrtime":1530,"crsdephour":12,"crsdeptime":1200,"crselapsedtime":150.0,"depdelay":0.0,"dist":912.0,"fldate":"2018-02-04","id":"IAH_CLT_2018-02-04_UA_659","month":2,"src":"IAH"}
+{"arrdelay":83.0,"crsarrtime":7,"crsdephour":21,"crsdeptime":2110,"crselapsedtime":117.0,"depdelay":98.0,"dist":599.0,"fldate":"2018-02-04","id":"ORD_CLT_2018-02-04_UA_2158","month":2,"src":"ORD"}

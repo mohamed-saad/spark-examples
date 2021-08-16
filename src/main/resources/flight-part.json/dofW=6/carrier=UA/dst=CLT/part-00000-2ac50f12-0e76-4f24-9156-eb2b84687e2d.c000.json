@@ -1,0 +1,3 @@
+{"arrdelay":0.0,"crsarrtime":2300,"crsdephour":17,"crsdeptime":1745,"crselapsedtime":195.0,"depdelay":0.0,"dist":1337.0,"fldate":"2018-01-06","id":"DEN_CLT_2018-01-06_UA_1505","month":1,"src":"DEN"}
+{"arrdelay":0.0,"crsarrtime":924,"crsdephour":6,"crsdeptime":630,"crselapsedtime":114.0,"depdelay":0.0,"dist":599.0,"fldate":"2018-01-06","id":"ORD_CLT_2018-01-06_UA_1750","month":1,"src":"ORD"}
+{"arrdelay":0.0,"crsarrtime":3,"crsdephour":21,"crsdeptime":2101,"crselapsedtime":122.0,"depdelay":0.0,"dist":599.0,"fldate":"2018-01-06","id":"ORD_CLT_2018-01-06_UA_2158","month":1,"src":"ORD"}

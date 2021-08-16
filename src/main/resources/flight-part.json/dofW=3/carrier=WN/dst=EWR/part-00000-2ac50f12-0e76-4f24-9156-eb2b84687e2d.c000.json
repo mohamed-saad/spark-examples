@@ -1,0 +1,11 @@
+{"arrdelay":6.0,"crsarrtime":1515,"crsdephour":9,"crsdeptime":940,"crselapsedtime":215.0,"depdelay":0.0,"dist":1605.0,"fldate":"2018-01-03","id":"DEN_EWR_2018-01-03_WN_178","month":1,"src":"DEN"}
+{"arrdelay":8.0,"crsarrtime":1735,"crsdephour":12,"crsdeptime":1200,"crselapsedtime":215.0,"depdelay":0.0,"dist":1605.0,"fldate":"2018-01-03","id":"DEN_EWR_2018-01-03_WN_1834","month":1,"src":"DEN"}
+{"arrdelay":0.0,"crsarrtime":2330,"crsdephour":18,"crsdeptime":1750,"crselapsedtime":220.0,"depdelay":4.0,"dist":1605.0,"fldate":"2018-01-03","id":"DEN_EWR_2018-01-03_WN_5627","month":1,"src":"DEN"}
+{"arrdelay":0.0,"crsarrtime":2320,"crsdephour":17,"crsdeptime":1740,"crselapsedtime":220.0,"depdelay":13.0,"dist":1605.0,"fldate":"2018-01-10","id":"DEN_EWR_2018-01-10_WN_1385","month":1,"src":"DEN"}
+{"arrdelay":0.0,"crsarrtime":1645,"crsdephour":11,"crsdeptime":1110,"crselapsedtime":215.0,"depdelay":0.0,"dist":1605.0,"fldate":"2018-01-10","id":"DEN_EWR_2018-01-10_WN_433","month":1,"src":"DEN"}
+{"arrdelay":24.0,"crsarrtime":2320,"crsdephour":17,"crsdeptime":1740,"crselapsedtime":220.0,"depdelay":19.0,"dist":1605.0,"fldate":"2018-01-17","id":"DEN_EWR_2018-01-17_WN_1385","month":1,"src":"DEN"}
+{"arrdelay":10.0,"crsarrtime":1645,"crsdephour":11,"crsdeptime":1110,"crselapsedtime":215.0,"depdelay":0.0,"dist":1605.0,"fldate":"2018-01-17","id":"DEN_EWR_2018-01-17_WN_433","month":1,"src":"DEN"}
+{"arrdelay":0.0,"crsarrtime":2320,"crsdephour":17,"crsdeptime":1740,"crselapsedtime":220.0,"depdelay":1.0,"dist":1605.0,"fldate":"2018-01-24","id":"DEN_EWR_2018-01-24_WN_1385","month":1,"src":"DEN"}
+{"arrdelay":9.0,"crsarrtime":1645,"crsdephour":11,"crsdeptime":1110,"crselapsedtime":215.0,"depdelay":16.0,"dist":1605.0,"fldate":"2018-01-24","id":"DEN_EWR_2018-01-24_WN_433","month":1,"src":"DEN"}
+{"arrdelay":0.0,"crsarrtime":2320,"crsdephour":17,"crsdeptime":1740,"crselapsedtime":220.0,"depdelay":0.0,"dist":1605.0,"fldate":"2018-01-31","id":"DEN_EWR_2018-01-31_WN_1385","month":1,"src":"DEN"}
+{"arrdelay":0.0,"crsarrtime":1645,"crsdephour":11,"crsdeptime":1110,"crselapsedtime":215.0,"depdelay":0.0,"dist":1605.0,"fldate":"2018-01-31","id":"DEN_EWR_2018-01-31_WN_433","month":1,"src":"DEN"}

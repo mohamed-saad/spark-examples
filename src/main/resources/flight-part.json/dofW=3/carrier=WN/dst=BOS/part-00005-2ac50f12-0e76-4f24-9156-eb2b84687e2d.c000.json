@@ -1,0 +1,11 @@
+{"arrdelay":40.0,"crsarrtime":110,"crsdephour":22,"crsdeptime":2235,"crselapsedtime":155.0,"depdelay":35.0,"dist":946.0,"fldate":"2018-07-18","id":"ATL_BOS_2018-07-18_WN_1570","month":7,"src":"ATL"}
+{"arrdelay":0.0,"crsarrtime":1140,"crsdephour":9,"crsdeptime":855,"crselapsedtime":165.0,"depdelay":11.0,"dist":946.0,"fldate":"2018-07-18","id":"ATL_BOS_2018-07-18_WN_2438","month":7,"src":"ATL"}
+{"arrdelay":0.0,"crsarrtime":2225,"crsdephour":19,"crsdeptime":1940,"crselapsedtime":165.0,"depdelay":8.0,"dist":946.0,"fldate":"2018-07-18","id":"ATL_BOS_2018-07-18_WN_706","month":7,"src":"ATL"}
+{"arrdelay":0.0,"crsarrtime":2350,"crsdephour":18,"crsdeptime":1755,"crselapsedtime":235.0,"depdelay":0.0,"dist":1754.0,"fldate":"2018-07-18","id":"DEN_BOS_2018-07-18_WN_1454","month":7,"src":"DEN"}
+{"arrdelay":0.0,"crsarrtime":1640,"crsdephour":10,"crsdeptime":1030,"crselapsedtime":250.0,"depdelay":4.0,"dist":1754.0,"fldate":"2018-07-18","id":"DEN_BOS_2018-07-18_WN_1772","month":7,"src":"DEN"}
+{"arrdelay":4.0,"crsarrtime":1915,"crsdephour":13,"crsdeptime":1310,"crselapsedtime":245.0,"depdelay":21.0,"dist":1754.0,"fldate":"2018-07-18","id":"DEN_BOS_2018-07-18_WN_2140","month":7,"src":"DEN"}
+{"arrdelay":27.0,"crsarrtime":110,"crsdephour":22,"crsdeptime":2235,"crselapsedtime":155.0,"depdelay":36.0,"dist":946.0,"fldate":"2018-07-25","id":"ATL_BOS_2018-07-25_WN_1570","month":7,"src":"ATL"}
+{"arrdelay":0.0,"crsarrtime":1140,"crsdephour":9,"crsdeptime":855,"crselapsedtime":165.0,"depdelay":0.0,"dist":946.0,"fldate":"2018-07-25","id":"ATL_BOS_2018-07-25_WN_2438","month":7,"src":"ATL"}
+{"arrdelay":60.0,"crsarrtime":2225,"crsdephour":19,"crsdeptime":1940,"crselapsedtime":165.0,"depdelay":79.0,"dist":946.0,"fldate":"2018-07-25","id":"ATL_BOS_2018-07-25_WN_706","month":7,"src":"ATL"}
+{"arrdelay":117.0,"crsarrtime":2350,"crsdephour":18,"crsdeptime":1755,"crselapsedtime":235.0,"depdelay":130.0,"dist":1754.0,"fldate":"2018-07-25","id":"DEN_BOS_2018-07-25_WN_1454","month":7,"src":"DEN"}
+{"arrdelay":0.0,"crsarrtime":1640,"crsdephour":10,"crsdeptime":1030,"crselapsedtime":250.0,"depdelay":2.0,"dist":1754.0,"fldate":"2018-07-25","id":"DEN_BOS_2018-07-25_WN_1772","month":7,"src":"DEN"}

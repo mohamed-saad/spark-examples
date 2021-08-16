@@ -1,0 +1,14 @@
+{"arrdelay":0.0,"crsarrtime":1030,"crsdephour":8,"crsdeptime":830,"crselapsedtime":180.0,"depdelay":0.0,"dist":1024.0,"fldate":"2018-07-16","id":"DEN_SEA_2018-07-16_WN_1617","month":7,"src":"DEN"}
+{"arrdelay":80.0,"crsarrtime":2055,"crsdephour":19,"crsdeptime":1855,"crselapsedtime":180.0,"depdelay":98.0,"dist":1024.0,"fldate":"2018-07-16","id":"DEN_SEA_2018-07-16_WN_2099","month":7,"src":"DEN"}
+{"arrdelay":0.0,"crsarrtime":755,"crsdephour":6,"crsdeptime":600,"crselapsedtime":175.0,"depdelay":6.0,"dist":1024.0,"fldate":"2018-07-16","id":"DEN_SEA_2018-07-16_WN_2253","month":7,"src":"DEN"}
+{"arrdelay":0.0,"crsarrtime":1500,"crsdephour":13,"crsdeptime":1300,"crselapsedtime":180.0,"depdelay":0.0,"dist":1024.0,"fldate":"2018-07-16","id":"DEN_SEA_2018-07-16_WN_2406","month":7,"src":"DEN"}
+{"arrdelay":105.0,"crsarrtime":10,"crsdephour":22,"crsdeptime":2225,"crselapsedtime":165.0,"depdelay":112.0,"dist":1024.0,"fldate":"2018-07-16","id":"DEN_SEA_2018-07-16_WN_650","month":7,"src":"DEN"}
+{"arrdelay":0.0,"crsarrtime":1030,"crsdephour":8,"crsdeptime":830,"crselapsedtime":180.0,"depdelay":0.0,"dist":1024.0,"fldate":"2018-07-23","id":"DEN_SEA_2018-07-23_WN_1617","month":7,"src":"DEN"}
+{"arrdelay":191.0,"crsarrtime":2055,"crsdephour":19,"crsdeptime":1855,"crselapsedtime":180.0,"depdelay":203.0,"dist":1024.0,"fldate":"2018-07-23","id":"DEN_SEA_2018-07-23_WN_2099","month":7,"src":"DEN"}
+{"arrdelay":0.0,"crsarrtime":755,"crsdephour":6,"crsdeptime":600,"crselapsedtime":175.0,"depdelay":0.0,"dist":1024.0,"fldate":"2018-07-23","id":"DEN_SEA_2018-07-23_WN_2253","month":7,"src":"DEN"}
+{"arrdelay":5.0,"crsarrtime":1500,"crsdephour":13,"crsdeptime":1300,"crselapsedtime":180.0,"depdelay":5.0,"dist":1024.0,"fldate":"2018-07-23","id":"DEN_SEA_2018-07-23_WN_2406","month":7,"src":"DEN"}
+{"arrdelay":0.0,"crsarrtime":1030,"crsdephour":8,"crsdeptime":830,"crselapsedtime":180.0,"depdelay":0.0,"dist":1024.0,"fldate":"2018-07-30","id":"DEN_SEA_2018-07-30_WN_1617","month":7,"src":"DEN"}
+{"arrdelay":0.0,"crsarrtime":2055,"crsdephour":19,"crsdeptime":1855,"crselapsedtime":180.0,"depdelay":6.0,"dist":1024.0,"fldate":"2018-07-30","id":"DEN_SEA_2018-07-30_WN_2099","month":7,"src":"DEN"}
+{"arrdelay":0.0,"crsarrtime":755,"crsdephour":6,"crsdeptime":600,"crselapsedtime":175.0,"depdelay":0.0,"dist":1024.0,"fldate":"2018-07-30","id":"DEN_SEA_2018-07-30_WN_2253","month":7,"src":"DEN"}
+{"arrdelay":0.0,"crsarrtime":1500,"crsdephour":13,"crsdeptime":1300,"crselapsedtime":180.0,"depdelay":9.0,"dist":1024.0,"fldate":"2018-07-30","id":"DEN_SEA_2018-07-30_WN_2406","month":7,"src":"DEN"}
+{"arrdelay":0.0,"crsarrtime":10,"crsdephour":22,"crsdeptime":2225,"crselapsedtime":165.0,"depdelay":0.0,"dist":1024.0,"fldate":"2018-07-30","id":"DEN_SEA_2018-07-30_WN_650","month":7,"src":"DEN"}
