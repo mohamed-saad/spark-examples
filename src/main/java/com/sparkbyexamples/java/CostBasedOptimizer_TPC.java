@@ -9,11 +9,14 @@ import org.apache.spark.sql.types.StructField;
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.*;
 
 public class CostBasedOptimizer_TPC {
 
     private static final String LINE = "-------------------------------------------------------------------------------------";
+//    private static final String EXTENSION = "tbl";
+    private static final String EXTENSION = "dat";
 
     private static void csvToParquet(SparkSession spark, String headersPath, String inPath, String outPath, String table, int partitionCount) {
         Dataset<Row> headers = spark.read()
@@ -21,7 +24,7 @@ public class CostBasedOptimizer_TPC {
                 .csv(headersPath + "/" + table + ".txt");
         Dataset<Row> ds = spark.read()
                 .option("delimiter", "|").option("inferSchema", "true").option("header", "true")
-                .csv(inPath + "/" + table + ".tbl").toDF(headers.columns());
+                .csv(inPath + "/" + table + "." + EXTENSION).toDF(headers.columns());
         if (partitionCount > 0)
             ds = ds.repartition(partitionCount);
         ds.write().mode("overwrite").parquet(outPath + "/" + table + "/");
@@ -46,10 +49,19 @@ public class CostBasedOptimizer_TPC {
     }
 
     private static void createTable(SparkSession spark, String path, String table) {
+        /*
+        The following method copies the table locally again in the spark-warehouse folder,
+        so I didn't use it and used CREATE TABLE using LOCATION directly
+
+        spark.read().parquet(path + "/" + table).createOrReplaceTempView(table + "_vw");
+        spark.sql("CREATE TABLE " + table + " USING PARQUET AS SELECT * FROM `" + table + "_vw`");
+        */
+
         spark.sql("CREATE TABLE " + table + " USING PARQUET LOCATION '" + path + "/" + table + "'");
         Dataset<Row> ds = spark.sql("SELECT * FROM " + table + " WHERE FALSE");
         StringBuilder columns = new StringBuilder();
         String separator = "";
+        // TODO we should not collect statistics over all columns but only the columns referenced in the queries
         for (StructField col : ds.schema().fields()) {
             columns.append(separator).append(col.name());
             separator = ", ";
@@ -131,10 +143,12 @@ public class CostBasedOptimizer_TPC {
             runs = 1;
         }
         Map<String, List<Long>> executionTime = new TreeMap<>();
+        File[] files = queryDir.listFiles();
+        Arrays.sort(files);
         for (int r=0; r<runs; r++) {
             System.out.println(LINE);
             System.out.println("Run# " + (r+1) + "/" + runs);
-            for (File f : queryDir.listFiles()) {
+            for (File f : files) {
                 String query = new String(Files.readAllBytes(f.toPath()));
                 if (execute)
                     executionTime.computeIfAbsent(f.getName(), k -> new LinkedList<>()).add(query(spark, f.getName(), query));
@@ -224,7 +238,14 @@ public class CostBasedOptimizer_TPC {
                     // The default number of histogram buckets
                     .config("spark.sql.statistics.histogram.numBins", "254")
                     // Fall back to HDFS if the table statistics are not available from table metadata
-                    .config("spark.sql.statistics.fallBackToHdfs", "true");
+                    .config("spark.sql.statistics.fallBackToHdfs", "true")
+                    // Number of unique values
+                    .config("spark.sql.statistics.ndv.maxError", "0.05")
+                    // Percentile Approximation is used for calculating the histogram bins
+                    .config("spark.sql.statistics.percentile.accuracy", "10000")
+                    // Enables automatic update of the table size statistic of a table after the table has changed.
+                    .config("spark.sql.statistics.size.autoUpdate.enabled", "true")
+            ;
         }
 
         if (adaptive) {
@@ -260,6 +281,20 @@ public class CostBasedOptimizer_TPC {
         }
 
         System.out.println("Application ID " + spark.sparkContext().applicationId());
+    }
+
+    private static void splitQueries() throws Throwable{
+        String input = "/home/msaad/workspace/data/ds-queries/query_s100.sql";
+        StringBuilder query = new StringBuilder();
+        int scale = 100;
+        int index = 0;
+        for (String line: Files.readAllLines(Paths.get(input))) {
+            query.append(line).append("\n");
+            if (line.startsWith("-- end ")) {
+                Files.write(Paths.get(String.format("src/main/resources/tpcds-queries-s%d/tpcds-s%d-q%02d.sql", scale, scale, ++index)), query.toString().getBytes());
+                query = new StringBuilder();
+            }
+        }
     }
 
     /**
