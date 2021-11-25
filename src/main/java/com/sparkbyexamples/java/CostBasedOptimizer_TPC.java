@@ -11,6 +11,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.*;
+import java.util.stream.Collectors;
 
 public class CostBasedOptimizer_TPC {
 
@@ -30,18 +31,21 @@ public class CostBasedOptimizer_TPC {
         ds.write().mode("overwrite").parquet(outPath + "/" + table + "/");
     }
 
-    private static void csvToParquet(SparkSession spark, String headersPath, String inPath, String outPath) {
+    private static void csvToParquet(SparkSession spark, String headersPath, String inPath, String outPath, List<String> tables) {
+        if (outPath.startsWith("gs://") || outPath.startsWith("hdfs://") || outPath.startsWith("s3://" )) {
+            System.out.println("Skip generation, output exists at remote location " + outPath);
+            return;
+        }
         File outDir = new File(outPath);
         if (outDir.exists()) {
             System.out.println("Skip generation, output exists at " + outDir.getAbsolutePath());
             return;
         }
         outDir.mkdirs();
-        String[] tables = new File(headersPath).list();
-        System.out.println("Generate " + tables.length + " tables as parquet saved in " + outDir.getAbsolutePath());
+        System.out.println("Generate " + tables.size() + " tables as parquet saved in " + outDir.getAbsolutePath());
         long start = System.currentTimeMillis();
         for (String table: tables) {
-            csvToParquet(spark, headersPath, inPath, outPath, table.substring(0, table.indexOf(".")), 0);
+            csvToParquet(spark, headersPath, inPath, outPath, table, 0);
         }
         long end = System.currentTimeMillis();
         System.out.println("Generate tables completed in " + (end-start)/1000 + " seconds");
@@ -70,9 +74,8 @@ public class CostBasedOptimizer_TPC {
         // spark.sql("ANALYZE TABLE US_FLIGHT COMPUTE STATISTICS NOSCAN");
     }
 
-    private static void createTable(SparkSession spark, String path) {
-        String[] tables = new File(path).list();
-        System.out.println("Create " + tables.length + " optimized tables");
+    private static void createTable(SparkSession spark, String path, List<String> tables) {
+        System.out.println("Create " + tables.size() + " optimized tables");
         long start = System.currentTimeMillis();
         for (String table: tables) {
             createTable(spark, path, table);
@@ -86,9 +89,8 @@ public class CostBasedOptimizer_TPC {
         spark.read().parquet(path + "/" + table).createOrReplaceTempView(table);
     }
 
-    private static void createView(SparkSession spark, String path) {
-        String[] tables = new File(path).list();
-        System.out.println("Create " + tables.length+ " views");
+    private static void createView(SparkSession spark, String path, List<String> tables) {
+        System.out.println("Create " + tables.size() + " views");
         long start = System.currentTimeMillis();
         for (String table: tables) {
             createView(spark, path, table);
@@ -265,12 +267,17 @@ public class CostBasedOptimizer_TPC {
 
         SparkSession spark = sessionBuilder.getOrCreate();
 
-        csvToParquet(spark, headersPath, inputData, outputData);
+        // uncomment the following line to configure remote GCS bucket
+//        spark.sparkContext().hadoopConfiguration().set("google.cloud.auth.service.account.json.keyfile", "/workspace/keys/gcs-sys-1769.json");
+
+        List<String> tables = Arrays.stream(new File(headersPath).list()).map(name -> name.substring(0, name.indexOf("."))).collect(Collectors.toList());
+
+        csvToParquet(spark, headersPath, inputData, outputData, tables);
 
         if (optimize)
-            createTable(spark, outputData);
+            createTable(spark, outputData, tables);
         else
-            createView(spark, outputData);
+            createView(spark, outputData, tables);
 
         File queryDir;
         if (queryPath != null && (queryDir = new File(queryPath)).exists()) {
