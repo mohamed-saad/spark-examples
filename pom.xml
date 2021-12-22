@@ -16,6 +16,13 @@
             <version>3.1.2</version>
         </dependency>
 
+        <!-- https://mvnrepository.com/artifact/io.delta/delta-core -->
+        <dependency>
+            <groupId>io.delta</groupId>
+            <artifactId>delta-core_2.12</artifactId>
+            <version>0.7.0</version>
+        </dependency>
+
         <!-- https://mvnrepository.com/artifact/com.google.cloud.bigdataoss/gcs-connector -->
         <dependency>
             <groupId>com.google.cloud.bigdataoss</groupId>
@@ -34,6 +41,14 @@
                 <configuration>
                     <source>8</source>
                     <target>8</target>
+                </configuration>
+            </plugin>
+            <plugin>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <configuration>
+                    <descriptorRefs>
+                        <descriptorRef>jar-with-dependencies</descriptorRef>
+                    </descriptorRefs>
                 </configuration>
             </plugin>
         </plugins>
